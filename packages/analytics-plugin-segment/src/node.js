@@ -99,9 +99,10 @@ function segmentPlugin(userConfig = {}) {
       client.track(data)
     },
     /* identify user */
-    identify: ({ payload }) => {
-      const { userId, traits } = payload
-      client.identify({ userId, traits })
+    identify: ({ payload, config }) => {
+      const { userId, traits, options } = payload
+      client.identify({ userId, traits, integrations: config.integrations,
+          ...options, })
     },
   }
 }
