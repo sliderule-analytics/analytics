@@ -1,6 +1,7 @@
 {
   "name": "root",
   "private": true,
+  "version":"0.7.15",
   "scripts": {
     "setup": "npm install && lerna bootstrap",
     "setup-examples": "node ./scripts/installer.js",
